@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SignUp</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'>
+    <path d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5
+    144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z'/>
+    </svg>" type="image/svg+xml">
+</head>
+<body>
+<form id="main-form" onsubmit="return checkForm(document.getElementById('main-form'))" method="post">
+    <label for="name">Имя:</label>
+    <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+
+    <label for="password">Пароль:</label>
+    <div class="password-container">
+        <input type="password" name="pass" placeholder="Пароль" id="pass">
+        <i class="toggle-password fas fa-eye"></i>
+    </div><br><br>
+
+    <label for="repass">Проверка пароля:</label>
+    <div class="password-container">
+        <input type="password" name="repass" placeholder="Проверка пароля" id="repass">
+        <i class="toggle-password fas fa-eye"></i>
+    </div><br><br>
+
+    <span>Пол:</span>
+    <div class="radio-group">
+        <label class="radio-option">
+            <input type="radio" name="state" id="male" value="Мужской">
+            Мужской
+        </label>
+        <label class="radio-option">
+            <input type="radio" name="state" id="female" value="Женский">
+            Женский
+        </label>
+    </div>
+
+    <input type="submit" name="submit" value="Готово" id="btn">
+    <span class="colorerror" id="error"></span>
+</form>
+<script src="js/script.js"></script>
+</body>
+</html>
